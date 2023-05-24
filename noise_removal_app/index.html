@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Noise Removal App</title>
+</head>
+<body>
+    <h1>Noise Removal App</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3>Upload Audio File:</h3>
+        <input type="file" name="audio_file" accept="audio/*">
+
+        <h3>Upload Image File:</h3>
+        <input type="file" name="image_file" accept="image/*">
+
+        <h3>Input Sensor Data:</h3>
+        <textarea name="sensor_data" rows="4" cols="50" placeholder="Enter sensor data, separated by commas"></textarea>
+
+        <br><br>
+        <input type="submit" value="Process Data">
+    </form>
+</body>
+</html>
